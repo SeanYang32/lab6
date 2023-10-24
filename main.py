@@ -1,3 +1,4 @@
+#Sean Yang
 def encode(originalString):
     finalString = ""
     for i in range(0, len(originalString)):
@@ -5,9 +6,6 @@ def encode(originalString):
         finalString = finalString + str(tempInt)
     return finalString
 
-
-def encodeDigit(num):
-    return str((num + 3) % 10)
 
 def main():
     stillRunning = True
