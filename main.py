@@ -6,6 +6,14 @@ def encode(originalString):
         finalString = finalString + str(tempInt)
     return finalString
 
+def decode(originalString):
+    finalString = ""
+    for i in originalString:
+        temp = int(i) - 3
+        if temp < 0:
+            temp += 10
+        finalString += str(temp)
+    return finalString
 
 def main():
     stillRunning = True
@@ -16,6 +24,9 @@ def main():
             passwordInput = input("Please enter your password to encode: ")
             encodedPassword = encode(passwordInput)
             print("Your password has been encoded and stored!")
+        if selection == "2":
+            decodedPassword = decode(encodedPassword)
+            print(f"The encoded password is {encodedPassword}, and the original password is {decodedPassword}.")
         if selection == "3":
             stillRunning = False
 
